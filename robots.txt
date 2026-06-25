@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ippmccl.github.io/espai-salut/sitemap.xml
