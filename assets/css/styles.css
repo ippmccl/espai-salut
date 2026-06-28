@@ -3803,3 +3803,16 @@ body {
 .mobile-menu {
   z-index: calc(var(--z-sticky) - 1);
 }
+
+/* Evitar text tallat en mòbil — contenidors de text */
+@media (max-width: 768px) {
+  p, li, h1, h2, h3, h4, h5 {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+  }
+  .container, .section, [class*="grid"], [class*="col"] {
+    min-width: 0;
+    max-width: 100%;
+  }
+}
