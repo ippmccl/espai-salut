@@ -3677,3 +3677,62 @@ html, body {
     -webkit-overflow-scrolling: touch;
   }
 }
+
+/* ================================================
+   MOBILE FIXES v1.2 — Badge, Carousel, WhatsApp
+   ================================================ */
+
+/* Badge de la secció "sobre mi" a l'index — amagar en mòbil per evitar solapament */
+@media (max-width: 768px) {
+  .about-photo .about-photo__badge {
+    display: none;
+  }
+  /* Separació extra entre foto i bio quan s'apilen */
+  .two-col--balanced {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-8) !important;
+  }
+  .about-bio {
+    padding-top: 0;
+  }
+}
+
+/* Carousel — millora tàctil i z-index dels botons */
+.carousel__btn {
+  touch-action: manipulation;
+  cursor: pointer;
+  z-index: 10;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Assegurar que el track ocupa 100% del carousel */
+.carousel {
+  touch-action: pan-y;
+}
+
+.carousel__track {
+  will-change: transform;
+}
+
+/* WhatsApp flotant — z-index alt per assegurar visibilitat */
+.whatsapp-float {
+  z-index: var(--z-toast) !important;
+}
+
+/* Botó WhatsApp de la secció CTA — no circular com el flotant */
+.btn--whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: #25D366;
+  color: #fff;
+  border-radius: var(--radius-full);
+  padding: var(--space-3) var(--space-6);
+  font-weight: var(--fw-semibold);
+  text-decoration: none;
+  transition: background var(--transition-fast);
+}
+.btn--whatsapp:hover {
+  background: #1ebe5a;
+  color: #fff;
+}
