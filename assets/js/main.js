@@ -185,7 +185,14 @@ function initContactForm() {
 
   const honeypot  = form.querySelector('.form-honeypot input');
   const msgOk     = $('#form-success');
-  const msgErr    = $('#form-error');
+
+  // Mostrar missatge d'èxit si tornem de FormSubmit.co amb ?enviat=1
+  if (window.location.search.includes('enviat=1') && msgOk) {
+    msgOk.style.display = 'block';
+    msgOk.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    // Netejar el paràmetre de la URL sense recarregar
+    history.replaceState(null, '', window.location.pathname);
+  }
 
   function showError(input, msg) {
     input.classList.add('error');
@@ -223,11 +230,9 @@ function initContactForm() {
     field.addEventListener('input', () => clearError(field));
   });
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
+  form.addEventListener('submit', (e) => {
     // Honeypot check — si té valor, és un bot
-    if (honeypot && honeypot.value) return;
+    if (honeypot && honeypot.value) { e.preventDefault(); return; }
 
     let valid = true;
     $$('[required]', form).forEach(field => {
@@ -246,43 +251,14 @@ function initContactForm() {
       valid = false;
     }
 
-    if (!valid) return;
+    if (!valid) { e.preventDefault(); return; }
 
+    // Validació OK → deixem que el formulari s'enviï naturaalment a FormSubmit.co
     const submitBtn = form.querySelector('[type="submit"]');
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Enviant…';
-
-    // Aquí conectes amb el teu backend o formulari Formspree/Netlify
-    // Simulació: descomentar i adaptar a la teva solució
-    /*
-    try {
-      const data = new FormData(form);
-      const res  = await fetch('URL_DEL_TEU_ENDPOINT', {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
-      if (res.ok) {
-        if (msgOk) msgOk.style.display = 'block';
-        form.reset();
-      } else {
-        throw new Error('Error del servidor');
-      }
-    } catch {
-      if (msgErr) msgErr.style.display = 'block';
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Enviar missatge';
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviant…';
     }
-    */
-
-    // DEMO (treure quan hi hagi backend real):
-    setTimeout(() => {
-      if (msgOk) { msgOk.style.display = 'block'; msgOk.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
-      form.reset();
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Enviar missatge';
-    }, 1000);
   });
 }
 
@@ -478,4 +454,25 @@ function initActiveNav() {
 
 /* ================================================
    INICIALITZACIÓ GLOBAL
-   =========================================
+   ================================================ */
+function initAll() {
+  initHeader();
+  initMobileNav();
+  initDropdowns();
+  initAllCarousels();
+  initFAQ();
+  initScrollAnimations();
+  initSmoothScroll();
+  initActiveNav();
+  initContactForm();
+  initCookieBanner();
+  initWhatsApp();
+}
+
+// Funciona tant amb defer com sense
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initAll);
+} else {
+  initAll();
+}
+                                                                                                                            
