@@ -3736,3 +3736,54 @@ html, body {
   background: #1ebe5a;
   color: #fff;
 }
+
+/* ================================================
+   MOBILE FIXES v1.3 — Foto, menú, WhatsApp
+   ================================================ */
+
+/* CRÍTICO: overflow-x: hidden en html trenca position:fixed en Android.
+   Eliminem el que vam afegir a v1.1 — només body pot tenir-lo */
+html {
+  max-width: unset;
+  overflow-x: unset;
+}
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Foto "yo.png" a la secció "sobre mi" de l'inici — limitar alçada en mòbil */
+@media (max-width: 768px) {
+  .about-photo img,
+  .about-photo-wrapper img {
+    max-height: 380px !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+    object-position: center top;
+  }
+}
+
+/* WhatsApp flotant — a mòbil, pujar-lo per no tapar botons del hero */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    bottom: 1.5rem !important;
+    right: 1rem !important;
+  }
+  /* Botó hero — espai a la dreta per no quedar tapat */
+  .hero__actions {
+    padding-right: 4.5rem;
+  }
+}
+
+/* Menú hamburguesa — assegurar que el toggle té z-index alt i és clicable */
+.nav-toggle {
+  position: relative;
+  z-index: var(--z-sticky);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.mobile-menu {
+  z-index: calc(var(--z-sticky) - 1);
+}
