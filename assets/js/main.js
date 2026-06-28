@@ -299,10 +299,24 @@ function setCookieConsent(prefs) {
   localStorage.setItem(COOKIE_KEY, JSON.stringify({ ...prefs, date: new Date().toISOString() }));
 }
 
+const GA_ID = 'G-9KCBYRQ59H';
+
+function loadGA4() {
+  if (window._ga4Loaded) return;
+  window._ga4Loaded = true;
+  const s = document.createElement('script');
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+  s.async = true;
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){ window.dataLayer.push(arguments); };
+  window.gtag('js', new Date());
+  window.gtag('config', GA_ID, { anonymize_ip: true });
+}
+
 function applyCookiePrefs(prefs) {
   if (prefs.analytics) {
-    // Activar Google Analytics
-    // window['ga-disable-G-XXXXXXXX'] = false;
+    loadGA4();
   }
 }
 
@@ -464,24 +478,4 @@ function initActiveNav() {
 
 /* ================================================
    INICIALITZACIÓ GLOBAL
-   ================================================ */
-function initAll() {
-  initHeader();
-  initMobileNav();
-  initDropdowns();
-  initAllCarousels();
-  initFAQ();
-  initScrollAnimations();
-  initSmoothScroll();
-  initActiveNav();
-  initContactForm();
-  initCookieBanner();
-  initWhatsApp();
-}
-
-// Funciona tant amb defer com sense
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initAll);
-} else {
-  initAll();
-}
+   =========================================
