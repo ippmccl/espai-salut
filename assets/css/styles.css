@@ -3533,3 +3533,147 @@ img[loading="lazy"] {
   letter-spacing: .03em;
   text-transform: uppercase;
 }
+
+/* ================================================
+   MOBILE RESPONSIVE FIXES — v1.1 (Juny 2026)
+   Correccions detectades en dispositius reals
+   ================================================ */
+
+/* 1. Evitar desbordament horitzontal global */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* 2. BLOG GRID — 1 columna a mòbil
+   (la segona definició no tenia breakpoint mobile) */
+@media (max-width: 640px) {
+  .blog-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-6);
+  }
+  .blog-card__title {
+    font-size: var(--text-xl);
+  }
+}
+
+/* 3. LOCAL GALLERY — apilar a mòbil i tauleta
+   (el breakpoint anterior era 520px, massa petit) */
+@media (max-width: 768px) {
+  .local-gallery {
+    grid-template-columns: 1fr;
+  }
+  .local-gallery__main img {
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+    object-fit: cover;
+  }
+  .local-gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .local-gallery__grid img {
+    height: 100px;
+  }
+}
+
+@media (max-width: 400px) {
+  .local-gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .local-gallery__grid img {
+    height: 80px;
+  }
+}
+
+/* 4. ABOUT PHOTO BADGE — evitar desbordament horitzontal */
+@media (max-width: 768px) {
+  .about-photo-wrapper {
+    display: block;
+    width: 100%;
+  }
+  .about-photo__badge {
+    flex-wrap: wrap;
+    white-space: normal;
+  }
+  .about-photo__badge .colegiado-num,
+  .about-photo__badge .colegiado-val {
+    white-space: normal;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  .about-grid__photo {
+    position: static;
+  }
+  .about-photo {
+    max-height: 320px;
+    width: 100%;
+  }
+}
+
+/* 5. GRID SERVICE CARDS — 1 columna a mòbil */
+@media (max-width: 480px) {
+  .grid--3,
+  .grid--2 {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* 6. CAROUSEL — assegurar que no desborda */
+@media (max-width: 640px) {
+  .carousel-wrapper {
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .carousel,
+  .carousel__slide {
+    height: 240px;
+  }
+}
+
+/* 7. HERO CARD — evitar que el formulari desbodi en mòbil */
+@media (max-width: 899px) {
+  .hero__card {
+    padding: var(--space-6);
+    max-width: 100%;
+  }
+  .hero__container {
+    overflow: hidden;
+  }
+}
+
+/* 8. HEADER — evitar desbordament del logo en pantalles estretes */
+@media (max-width: 360px) {
+  .logo-text__name {
+    font-size: 0.8rem;
+  }
+  .logo-text__tagline {
+    font-size: 0.55rem;
+  }
+  .site-logo img {
+    height: 36px;
+  }
+}
+
+/* 9. CARDS I GRIDS — padding mínim a mòbil */
+@media (max-width: 480px) {
+  .service-card {
+    padding: var(--space-6);
+  }
+  .container {
+    padding-inline: var(--space-4);
+  }
+}
+
+/* 10. TAULES responsive */
+@media (max-width: 640px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
