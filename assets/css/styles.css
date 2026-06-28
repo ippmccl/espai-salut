@@ -587,12 +587,21 @@ section {
   z-index: calc(var(--z-sticky) - 1);
   padding: var(--space-8) var(--gutter);
   overflow-y: auto;
-  transform: translateX(100%);
-  transition: transform var(--transition-slow);
+  /* Usar visibility+opacity en lloc de translateX per evitar
+     el bug d'Android on overflow-x:hidden talla position:fixed */
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s linear 0.25s;
 }
 
 .mobile-menu.open {
-  transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  transition-delay: 0s;
 }
 
 .mobile-nav a {
@@ -2721,7 +2730,7 @@ img[loading="lazy"] {
 
   body { font-size: 12pt; color: #000; }
 }
-  
+
 /* ==============================
 /* ================================================
    SIDEBAR CARDS (pàgines de servei)
@@ -3109,7 +3118,7 @@ img[loading="lazy"] {
     height: 120px;
   }
 }
-                                                                                                   
+
 /* ================================================
    BANNER NOTÍCIES EXTERNES
    ================================================ */
@@ -3754,13 +3763,20 @@ body {
 
 /* Foto "yo.png" a la secció "sobre mi" de l'inici — limitar alçada en mòbil */
 @media (max-width: 768px) {
+  .about-photo,
+  .about-photo-wrapper {
+    overflow: hidden;
+    max-height: 420px;
+    border-radius: var(--radius-xl);
+  }
   .about-photo img,
   .about-photo-wrapper img {
-    max-height: 380px !important;
     width: 100% !important;
-    height: auto !important;
-    object-fit: cover;
-    object-position: center top;
+    height: 420px !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    max-height: none !important;
+    border-radius: 0 !important;
   }
 }
 
