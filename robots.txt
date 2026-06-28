@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ippmccl.github.io/espai-salut/sitemap.xml
+# No indexar páginas de administración ni recursos internos
+Disallow: /assets/js/
+Disallow: /assets/css/
+
+# Sitemap
+Sitemap: https://www.espaisalutrubi.es/sitemap.xml
