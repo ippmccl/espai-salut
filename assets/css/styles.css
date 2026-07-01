@@ -587,21 +587,12 @@ section {
   z-index: calc(var(--z-sticky) - 1);
   padding: var(--space-8) var(--gutter);
   overflow-y: auto;
-  /* Usar visibility+opacity en lloc de translateX per evitar
-     el bug d'Android on overflow-x:hidden talla position:fixed */
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-6px);
-  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s linear 0.25s;
+  transform: translateX(100%);
+  transition: transform var(--transition-slow);
 }
 
 .mobile-menu.open {
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
-  transition-delay: 0s;
+  transform: translateX(0);
 }
 
 .mobile-nav a {
@@ -1979,6 +1970,20 @@ section {
   color: var(--color-secondary);
 }
 
+.footer-treballa {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,.45);
+  text-decoration: none;
+  margin-top: var(--space-3);
+  transition: color var(--transition-fast);
+}
+
+.footer-treballa:hover {
+  color: rgba(255,255,255,.8);
+}
+
 .footer-bottom {
   padding-block: var(--space-6);
   display: flex;
@@ -2730,7 +2735,7 @@ img[loading="lazy"] {
 
   body { font-size: 12pt; color: #000; }
 }
-
+  
 /* ==============================
 /* ================================================
    SIDEBAR CARDS (pàgines de servei)
@@ -3118,7 +3123,7 @@ img[loading="lazy"] {
     height: 120px;
   }
 }
-
+                                                                                                   
 /* ================================================
    BANNER NOTÍCIES EXTERNES
    ================================================ */
@@ -3763,20 +3768,13 @@ body {
 
 /* Foto "yo.png" a la secció "sobre mi" de l'inici — limitar alçada en mòbil */
 @media (max-width: 768px) {
-  .about-photo,
-  .about-photo-wrapper {
-    overflow: hidden;
-    max-height: 420px;
-    border-radius: var(--radius-xl);
-  }
   .about-photo img,
   .about-photo-wrapper img {
+    max-height: 380px !important;
     width: 100% !important;
-    height: 420px !important;
-    object-fit: cover !important;
-    object-position: center top !important;
-    max-height: none !important;
-    border-radius: 0 !important;
+    height: auto !important;
+    object-fit: cover;
+    object-position: center top;
   }
 }
 
@@ -3802,17 +3800,4 @@ body {
 
 .mobile-menu {
   z-index: calc(var(--z-sticky) - 1);
-}
-
-/* Evitar text tallat en mòbil — contenidors de text */
-@media (max-width: 768px) {
-  p, li, h1, h2, h3, h4, h5 {
-    overflow-wrap: break-word;
-    word-break: break-word;
-    hyphens: auto;
-  }
-  .container, .section, [class*="grid"], [class*="col"] {
-    min-width: 0;
-    max-width: 100%;
-  }
 }
