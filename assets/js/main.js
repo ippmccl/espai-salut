@@ -6,6 +6,10 @@
 
 'use strict';
 
+// Idioma de la pàgina (ca per defecte, es a /es/)
+const IS_ES = document.documentElement.lang === 'es';
+const L = (ca, es) => (IS_ES ? es : ca);
+
 /* ================================================
    UTILITATS
    ================================================ */
@@ -123,7 +127,7 @@ function initCarousel(carouselEl) {
     slides.forEach((_, i) => {
       const dot = document.createElement('button');
       dot.className = 'carousel__dot' + (i === 0 ? ' active' : '');
-      dot.setAttribute('aria-label', `Imatge ${i + 1}`);
+      dot.setAttribute('aria-label', L(`Imatge ${i + 1}`, `Imagen ${i + 1}`));
       dot.addEventListener('click', () => goTo(i));
       dotsWrap.appendChild(dot);
     });
@@ -218,11 +222,11 @@ function initContactForm() {
   $$('[required]', form).forEach(field => {
     field.addEventListener('blur', () => {
       if (!field.value.trim()) {
-        showError(field, 'Camp obligatori');
+        showError(field, L('Camp obligatori', 'Campo obligatorio'));
       } else if (field.type === 'email' && !validateEmail(field.value)) {
-        showError(field, 'Adreça electrònica no vàlida');
+        showError(field, L('Adreça electrònica no vàlida', 'Correo electrónico no válido'));
       } else if (field.name === 'telefon' && !validatePhone(field.value)) {
-        showError(field, 'Telèfon no vàlid');
+        showError(field, L('Telèfon no vàlid', 'Teléfono no válido'));
       } else {
         clearError(field);
       }
@@ -237,17 +241,17 @@ function initContactForm() {
     let valid = true;
     $$('[required]', form).forEach(field => {
       if (!field.value.trim()) {
-        showError(field, 'Camp obligatori');
+        showError(field, L('Camp obligatori', 'Campo obligatorio'));
         valid = false;
       } else if (field.type === 'email' && !validateEmail(field.value)) {
-        showError(field, 'Adreça electrònica no vàlida');
+        showError(field, L('Adreça electrònica no vàlida', 'Correo electrónico no válido'));
         valid = false;
       }
     });
 
     const consent = form.querySelector('[name="consentiment"]');
     if (consent && !consent.checked) {
-      showError(consent, 'Has d\'acceptar la política de privacitat per enviar el formulari');
+      showError(consent, L('Has d\'acceptar la política de privacitat per enviar el formulari', 'Debes aceptar la política de privacidad para enviar el formulario'));
       valid = false;
     }
 
@@ -257,7 +261,7 @@ function initContactForm() {
     const submitBtn = form.querySelector('[type="submit"]');
     if (submitBtn) {
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Enviant…';
+      submitBtn.textContent = L('Enviant…', 'Enviando…');
     }
   });
 }
@@ -352,7 +356,7 @@ function initCookieBanner() {
 function initWhatsApp() {
   const WA_NUMBER = '34644467353';
   $$('[data-whatsapp]').forEach(el => {
-    const msg     = el.dataset.whatsapp || 'Hola, m\'agradaria demanar informació sobre els serveis d\'Espai Salut.';
+    const msg     = el.dataset.whatsapp || L('Hola, m\'agradaria demanar informació sobre els serveis d\'Espai Salut.', 'Hola, me gustaría pedir información sobre los servicios de Espai Salut.');
     const encoded = encodeURIComponent(msg);
     el.href       = `https://wa.me/${WA_NUMBER}?text=${encoded}`;
     el.target     = '_blank';
