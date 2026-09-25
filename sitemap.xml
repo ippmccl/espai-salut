@@ -1,146 +1,283 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Pàgines principals -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.espaisalutrubi.es/</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://www.espaisalutrubi.es/blog/ansietat-nens.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/blog/ansietat-nens.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/blog/ansiedad-ninos.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.espaisalutrubi.es/sobre-mi.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://www.espaisalutrubi.es/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/blog/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/blog/"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/blog/memoria-gent-gran.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/blog/memoria-gent-gran.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/blog/memoria-personas-mayores.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/blog/tdah-adult.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/blog/tdah-adult.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/blog/tdah-adultos.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.espaisalutrubi.es/contacto.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/contacto.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/es/blog/ansiedad-ninos.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/blog/ansietat-nens.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/blog/ansiedad-ninos.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/es/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/blog/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/blog/"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/es/blog/memoria-personas-mayores.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/blog/memoria-gent-gran.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/blog/memoria-personas-mayores.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/es/blog/tdah-adultos.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/blog/tdah-adult.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/blog/tdah-adultos.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/es/contacto.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/contacto.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/es/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/es/neuropsicologia-rubi.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/neuropsicologia-rubi.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/neuropsicologia-rubi.html"/>
+    <lastmod>2026-09-25</lastmod>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/es/preguntas-frecuentes.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/preguntas-frecuentes.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/es/psicologa-rubi.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/psicologia-rubi.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/psicologa-rubi.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/es/psicologia-online.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/psicologia-online.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/psicologia-online.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/es/servicios/becas-neae.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/servicios/becas-neae.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/servicios/becas-neae.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/es/servicios/estiu-actiu.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/servicios/estiu-actiu.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/servicios/estiu-actiu.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/es/servicios/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/servicios/"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/es/servicios/neuropsicologia.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/servicios/neuropsicologia.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/servicios/neuropsicologia.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/es/servicios/psicologia-adultos.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/servicios/psicologia-adultos.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/servicios/psicologia-adultos.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/es/servicios/psicologia-infanto-juvenil.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/servicios/psicologia-infanto-juvenil.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/servicios/psicologia-infanto-juvenil.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/es/servicios/terapia-familiar.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/servicios/terapia-familiar.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/servicios/terapia-familiar.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/es/servicios/terapia-online.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/servicios/terapia-online.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/servicios/terapia-online.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/es/servicios/tercera-edad.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/servicios/tercera-edad.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/servicios/tercera-edad.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/es/sobre-mi.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/sobre-mi.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/sobre-mi.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.espaisalutrubi.es/faq.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/preguntas-frecuentes.html"/>
+    <lastmod>2026-09-25</lastmod>
     <priority>0.7</priority>
   </url>
-
-  <!-- Pàgines SEO local -->
   <url>
-    <loc>https://www.espaisalutrubi.es/psicologia-rubi.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://www.espaisalutrubi.es/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.espaisalutrubi.es/neuropsicologia-rubi.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/neuropsicologia-rubi.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/neuropsicologia-rubi.html"/>
+    <lastmod>2026-09-25</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.espaisalutrubi.es/psicologia-online.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Serveis -->
-  <url>
-    <loc>https://www.espaisalutrubi.es/servicios/</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/psicologia-online.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/psicologia-online.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.espaisalutrubi.es/servicios/neuropsicologia.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.espaisalutrubi.es/psicologia-rubi.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/psicologia-rubi.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/psicologa-rubi.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.espaisalutrubi.es/servicios/psicologia-infanto-juvenil.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.espaisalutrubi.es/servicios/psicologia-adultos.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.espaisalutrubi.es/servicios/terapia-familiar.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.espaisalutrubi.es/servicios/becas-neae.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/servicios/becas-neae.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/servicios/becas-neae.html"/>
+    <lastmod>2026-09-25</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.espaisalutrubi.es/servicios/tercera-edad.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.espaisalutrubi.es/servicios/estiu-actiu.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/servicios/estiu-actiu.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/servicios/estiu-actiu.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/servicios/</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/servicios/"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/servicios/neuropsicologia.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/servicios/neuropsicologia.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/servicios/neuropsicologia.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/servicios/psicologia-adultos.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/servicios/psicologia-adultos.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/servicios/psicologia-adultos.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/servicios/psicologia-infanto-juvenil.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/servicios/psicologia-infanto-juvenil.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/servicios/psicologia-infanto-juvenil.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.espaisalutrubi.es/servicios/terapia-familiar.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/servicios/terapia-familiar.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/servicios/terapia-familiar.html"/>
+    <lastmod>2026-09-25</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.espaisalutrubi.es/servicios/terapia-online.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/servicios/terapia-online.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/servicios/terapia-online.html"/>
+    <lastmod>2026-09-25</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.espaisalutrubi.es/servicios/becas-neae.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Blog -->
-  <url>
-    <loc>https://www.espaisalutrubi.es/blog/</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://www.espaisalutrubi.es/servicios/tercera-edad.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/servicios/tercera-edad.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/servicios/tercera-edad.html"/>
+    <lastmod>2026-09-25</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.espaisalutrubi.es/blog/ansietat-nens.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.espaisalutrubi.es/sobre-mi.html</loc>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.espaisalutrubi.es/sobre-mi.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.espaisalutrubi.es/es/sobre-mi.html"/>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://www.espaisalutrubi.es/blog/tdah-adult.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.espaisalutrubi.es/blog/memoria-gent-gran.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Legal -->
-  <url>
-    <loc>https://www.espaisalutrubi.es/aviso-legal.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.espaisalutrubi.es/politica-privacidad.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.espaisalutrubi.es/politica-cookies.html</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
 </urlset>
