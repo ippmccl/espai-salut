@@ -4112,7 +4112,7 @@ body .tan-nota, body .tan-badge { font-size: 0.875rem; }
   .btn--hero { font-size: clamp(.75rem, 1vw, .9375rem); padding: .8em 2.4em; }
 }
 
-#contacte, #contacto { scroll-margin-top: calc(var(--header-height) + 1rem); }
+#contacte, #contacto, #formulari, #formulario { scroll-margin-top: calc(var(--header-height) + 1.5rem); }
 
 /* ---------- Zones que eren blau marí: ara arena amb lletra fosca ---------- */
 .section--dark { color: var(--color-ink); }
