@@ -4016,8 +4016,9 @@ body .tan-nota, body .tan-badge { font-size: 0.875rem; }
   .logo-text__sub { font-size: clamp(.75rem, 1.25vw, 1rem); white-space: nowrap; }
 }
 
-/* ---------- Portada: retrat velat amb la frase a l'alçada del sofà ---------- */
+/* ---------- Portada: retrat velat SENCER (sense retallar) dins la mateixa franja ---------- */
 .hero-retrat {
+  --hero-h: clamp(300px, 31vw, 500px);      /* alçada de la franja: no canvia */
   position: relative;
   background: var(--color-arena);
   overflow: hidden;
@@ -4029,9 +4030,8 @@ body .tan-nota, body .tan-badge { font-size: 0.875rem; }
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  object-position: center 20%;
+  aspect-ratio: 1933 / 813;                  /* proporció real de la foto: es veu sencera */
+  object-fit: contain;
 }
 .hero-retrat__veil {
   position: absolute;
@@ -4087,29 +4087,41 @@ body .tan-nota, body .tan-badge { font-size: 0.875rem; }
 }
 
 @media (min-width: 768px) {
-  .hero-retrat__media img {
-    aspect-ratio: auto;
-    height: clamp(300px, 31vw, 500px);
-    object-position: 30% 0;
+  /* La foto s'encongeix fins a cabre sencera a la franja i queda centrada */
+  .hero-retrat__media {
+    height: var(--hero-h);
+    width: calc(var(--hero-h) * 2.3776);
+    max-width: 100%;
+    margin-inline: auto;
   }
+  .hero-retrat__media img { width: 100%; height: 100%; aspect-ratio: auto; }
   .hero-retrat__veil {
-    background: linear-gradient(90deg,
-      rgba(var(--color-arena-rgb), .44) 0%,
-      rgba(var(--color-arena-rgb), .50) 38%,
-      rgba(var(--color-arena-rgb), .70) 62%,
-      rgba(var(--color-arena-rgb), .74) 100%);
+    background:
+      linear-gradient(90deg,
+        rgba(var(--color-arena-rgb), 1) 0%,
+        rgba(var(--color-arena-rgb), 0) 9%,
+        rgba(var(--color-arena-rgb), 0) 91%,
+        rgba(var(--color-arena-rgb), 1) 100%),
+      linear-gradient(90deg,
+        rgba(var(--color-arena-rgb), .44) 0%,
+        rgba(var(--color-arena-rgb), .50) 38%,
+        rgba(var(--color-arena-rgb), .70) 62%,
+        rgba(var(--color-arena-rgb), .74) 100%);
   }
-  /* La frase queda a la meitat dreta, sota les lletres de la paret */
+  /* La frase, sota les lletres de la paret, a l'alçada del sofà (posició lligada a la foto) */
   .hero-retrat__text {
     position: absolute;
-    left: 47%;
-    right: 9%;
-    top: 50%;
+    left: calc(50% + var(--hero-h) * 0.4517);
+    right: auto;
+    top: 47%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: calc(var(--hero-h) * 1.45);
     padding: 0;
   }
-  .hero-retrat__slogan { font-size: clamp(1.5rem, 3.3vw, 3.2rem); margin-bottom: .3em; }
-  .hero-retrat__title  { font-size: clamp(.8125rem, 1.25vw, 1.1875rem); margin-bottom: 1.1em; }
-  .btn--hero { font-size: clamp(.75rem, 1vw, .9375rem); padding: .8em 2.4em; }
+  .hero-retrat__slogan { font-size: calc(var(--hero-h) * 0.1); margin-bottom: .3em; white-space: nowrap; }
+  .hero-retrat__title  { font-size: max(.8125rem, calc(var(--hero-h) * 0.041)); margin-bottom: 1.1em; }
+  .btn--hero { font-size: max(.75rem, calc(var(--hero-h) * 0.031)); padding: .8em 2.4em; }
 }
 
 #contacte, #contacto, #formulari, #formulario { scroll-margin-top: calc(var(--header-height) + 1.5rem); }
