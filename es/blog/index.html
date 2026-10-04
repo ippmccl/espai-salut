@@ -29,59 +29,74 @@
   <header class="site-header" role="banner">
     <div class="container">
       <div class="header-inner">
-        <a href="../index.html" class="site-logo">
-          <img src="../../assets/img/LOGO-ESPAI-SALUT.png" alt="Logo ESPAI SALUT" width="44" height="44" loading="eager">
+        <!-- Logo -->
+        <a href="../index.html" class="site-logo" aria-label="ESPAI SALUT - Página de inicio">
+          <img src="../../assets/img/icono-espai-salut.png" alt="Logo ESPAI SALUT" width="44" height="44" loading="eager">
           <div class="logo-text">
             <span class="logo-text__name">ESPAI SALUT RUBÍ</span>
-            <span class="logo-text__tagline">Psicología · Neuropsicología</span>
+            <span class="logo-text__sub">Centro de recursos y acompañamiento psicológico</span>
           </div>
         </a>
-        <nav class="site-nav" aria-label="Navegación principal">
+
+        <!-- Nav principal -->
+        <nav class="site-nav site-nav--curt" aria-label="Navegación principal">
           <a href="../index.html" class="nav-link">Inicio</a>
-          <a href="../sobre-mi.html" class="nav-link">Sobre mí</a>
           <div class="nav-dropdown">
             <button class="nav-dropdown__trigger" aria-haspopup="true" aria-expanded="false">
               Servicios
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="14" height="14" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
             </button>
-            <div class="nav-dropdown__menu">
-              <a href="../servicios/index.html">Todos los servicios</a>
-              <a href="../servicios/neuropsicologia.html">Neuropsicología</a>
-              <a href="../servicios/psicologia-infanto-juvenil.html">Psicología infantojuvenil</a>
-              <a href="../servicios/psicologia-adultos.html">Psicología de adultos</a>
-              <a href="../servicios/terapia-familiar.html">Terapia familiar y grupal</a>
-              <a href="../servicios/tercera-edad.html">Personas mayores</a>
-              <a href="../servicios/terapia-online.html">Terapia online</a>
-              <a href="../servicios/becas-neae.html">NEAE y becas</a>
+            <div class="nav-dropdown__menu" role="menu">
+              <a href="../servicios/index.html" role="menuitem">Todos los servicios</a>
+              <a href="../servicios/neuropsicologia.html" role="menuitem">Neuropsicología</a>
+              <a href="../servicios/psicologia-infanto-juvenil.html" role="menuitem">Psicología infantojuvenil</a>
+              <a href="../servicios/psicologia-adultos.html" role="menuitem">Psicología de adultos</a>
+              <a href="../servicios/terapia-familiar.html" role="menuitem">Terapia familiar y grupal</a>
+              <a href="../servicios/tercera-edad.html" role="menuitem">Personas mayores</a>
+              <a href="../servicios/terapia-online.html" role="menuitem">Terapia online</a>
+              <a href="../servicios/becas-neae.html" role="menuitem">NEAE y becas</a>
             </div>
           </div>
-          <a href="../neuropsicologia-rubi.html" class="nav-link">Neuropsicología</a>
-          <a href="index.html" class="nav-link nav-link--active">Blog</a>
-          <a href="../preguntas-frecuentes.html" class="nav-link">FAQ</a>
+          <a href="index.html" class="nav-link active">Blog</a>
           <a href="../contacto.html" class="nav-link">Contacto</a>
         </nav>
+
+        <!-- Header CTA -->
         <div class="header-cta">
           <a class="lang-switch" href="../../blog/index.html" hreflang="ca" lang="ca" aria-label="Versió en català">CA</a>
-          <a href="tel:+34644467353" class="btn btn--secondary btn--sm">644 46 73 53</a>
           <a href="../contacto.html" class="btn btn--primary btn--sm">Pedir cita</a>
         </div>
-        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+
+        <!-- Hamburger -->
+        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </header>
 
-  <div class="mobile-menu" id="mobile-menu">
-    <nav class="mobile-nav">
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menú de navegación">
+    <nav class="mobile-nav" aria-label="Navegación móvil">
       <a href="../index.html">Inicio</a>
-      <a href="../sobre-mi.html">Sobre mí</a>
       <a href="../servicios/index.html">Todos los servicios</a>
+      <div class="mobile-nav__sub">
+        <a href="../servicios/neuropsicologia.html">Neuropsicología</a>
+        <a href="../servicios/psicologia-infanto-juvenil.html">Psicología infantojuvenil</a>
+        <a href="../servicios/psicologia-adultos.html">Psicología de adultos</a>
+        <a href="../servicios/terapia-familiar.html">Terapia familiar</a>
+        <a href="../servicios/tercera-edad.html">Personas mayores</a>
+        <a href="../servicios/terapia-online.html">Terapia online</a>
+        <a href="../servicios/becas-neae.html">NEAE y becas</a>
+      </div>
       <a href="index.html">Blog</a>
-      <a href="../preguntas-frecuentes.html">FAQ</a>
       <a href="../contacto.html">Contacto</a>
     </nav>
     <div class="mobile-lang"><a href="../../blog/index.html" hreflang="ca" lang="ca">Català</a></div>
     <div class="mobile-menu__cta">
       <a href="../contacto.html" class="btn btn--primary btn--lg">Pedir cita</a>
+      <a href="tel:+34644467353" class="btn btn--secondary btn--lg">Llamar ahora</a>
     </div>
   </div>
 
@@ -173,7 +188,7 @@
       <div class="footer-grid">
         <div class="footer-col footer-col--brand">
           <a href="../index.html" class="site-logo site-logo--footer">
-            <img src="../../assets/img/LOGO-ESPAI-SALUT.png" alt="Logo ESPAI SALUT" width="40" height="40" loading="lazy">
+            <img src="../../assets/img/icono-espai-salut.png" alt="Logo ESPAI SALUT" width="40" height="40" loading="lazy">
             <div class="logo-text"><span class="logo-text__name">ESPAI SALUT RUBÍ</span><span class="logo-text__tagline">Psicología · Neuropsicología</span></div>
           </a>
           <p class="footer-tagline">Centro de recursos y acompañamiento psicológico en Rubí (Barcelona).</p>
