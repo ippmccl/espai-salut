@@ -86,39 +86,75 @@
   <header class="site-header" role="banner">
     <div class="container">
       <div class="header-inner">
-        <a href="index.html" class="site-logo"><img src="assets/img/LOGO-ESPAI-SALUT.png" alt="Logo ESPAI SALUT" width="44" height="44" loading="eager"><div class="logo-text"><span class="logo-text__name">ESPAI SALUT RUBÍ</span><span class="logo-text__tagline">Psicologia · Neuropsicologia</span></div></a>
-        <nav class="site-nav" aria-label="Navegació principal">
+        <!-- Logo -->
+        <a href="index.html" class="site-logo" aria-label="ESPAI SALUT - Pàgina d'inici">
+          <img src="assets/img/icono-espai-salut.png" alt="Logo ESPAI SALUT" width="44" height="44" loading="eager">
+          <div class="logo-text">
+            <span class="logo-text__name">ESPAI SALUT RUBÍ</span>
+            <span class="logo-text__sub">Centre de recursos i acompanyament psicològic</span>
+          </div>
+        </a>
+
+        <!-- Nav principal -->
+        <nav class="site-nav site-nav--curt" aria-label="Navegació principal">
           <a href="index.html" class="nav-link">Inici</a>
-          <a href="sobre-mi.html" class="nav-link">Sobre mi</a>
           <div class="nav-dropdown">
-            <button class="nav-dropdown__trigger" aria-haspopup="true">Serveis <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg></button>
-            <div class="nav-dropdown__menu">
-              <a href="servicios/index.html">Tots els serveis</a>
-              <a href="servicios/neuropsicologia.html">Neuropsicologia</a>
-              <a href="servicios/psicologia-infanto-juvenil.html">Psicologia infanto-juvenil</a>
-              <a href="servicios/psicologia-adultos.html">Psicologia d'adults</a>
-              <a href="servicios/terapia-familiar.html">Teràpia familiar i grupal</a>
-              <a href="servicios/tercera-edad.html">Gent gran</a>
-              <a href="servicios/terapia-online.html">Teràpia online</a>
-              <a href="servicios/becas-neae.html">NEAE i beques</a>
+            <button class="nav-dropdown__trigger" aria-haspopup="true" aria-expanded="false">
+              Serveis
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+            </button>
+            <div class="nav-dropdown__menu" role="menu">
+              <a href="servicios/index.html" role="menuitem">Tots els serveis</a>
+              <a href="servicios/neuropsicologia.html" role="menuitem">Neuropsicologia</a>
+              <a href="servicios/psicologia-infanto-juvenil.html" role="menuitem">Psicologia infanto-juvenil</a>
+              <a href="servicios/psicologia-adultos.html" role="menuitem">Psicologia d'adults</a>
+              <a href="servicios/terapia-familiar.html" role="menuitem">Teràpia familiar i grupal</a>
+              <a href="servicios/tercera-edad.html" role="menuitem">Gent gran</a>
+              <a href="servicios/terapia-online.html" role="menuitem">Teràpia online</a>
+              <a href="servicios/becas-neae.html" role="menuitem">NEAE i beques</a>
             </div>
           </div>
-          <a href="neuropsicologia-rubi.html" class="nav-link">Neuropsicologia</a>
           <a href="blog/index.html" class="nav-link">Blog</a>
-          <a href="faq.html" class="nav-link">FAQ</a>
           <a href="contacto.html" class="nav-link">Contacte</a>
         </nav>
+
+        <!-- Header CTA -->
         <div class="header-cta">
           <a class="lang-switch" href="es/psicologia-online.html" hreflang="es" lang="es" aria-label="Versión en castellano">ES</a>
-          <a href="tel:+34644467353" class="btn btn--secondary btn--sm">644 46 73 53</a>
           <a href="contacto.html" class="btn btn--primary btn--sm">Demanar cita</a>
         </div>
-        <button class="nav-toggle" aria-label="Obrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+
+        <!-- Hamburger -->
+        <button class="nav-toggle" aria-label="Obrir menú" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </header>
-  <div class="mobile-menu" id="mobile-menu"><nav class="mobile-nav"><a href="index.html">Inici</a><a href="sobre-mi.html">Sobre mi</a><a href="servicios/index.html">Tots els serveis</a><a href="contacto.html">Contacte</a></nav><div class="mobile-lang"><a href="es/psicologia-online.html" hreflang="es" lang="es">Castellano</a></div>
-    <div class="mobile-menu__cta"><a href="contacto.html" class="btn btn--primary btn--lg">Demanar cita</a></div></div>
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menú de navegació">
+    <nav class="mobile-nav" aria-label="Navegació mòbil">
+      <a href="index.html">Inici</a>
+      <a href="servicios/index.html">Tots els serveis</a>
+      <div class="mobile-nav__sub">
+        <a href="servicios/neuropsicologia.html">Neuropsicologia</a>
+        <a href="servicios/psicologia-infanto-juvenil.html">Psicologia infanto-juvenil</a>
+        <a href="servicios/psicologia-adultos.html">Psicologia d'adults</a>
+        <a href="servicios/terapia-familiar.html">Teràpia familiar</a>
+        <a href="servicios/tercera-edad.html">Gent gran</a>
+        <a href="servicios/terapia-online.html">Teràpia online</a>
+        <a href="servicios/becas-neae.html">NEAE i beques</a>
+      </div>
+      <a href="blog/index.html">Blog</a>
+      <a href="contacto.html">Contacte</a>
+    </nav>
+    <div class="mobile-lang"><a href="es/psicologia-online.html" hreflang="es" lang="es">Castellano</a></div>
+    <div class="mobile-menu__cta">
+      <a href="contacto.html" class="btn btn--primary btn--lg">Demanar cita</a>
+      <a href="tel:+34644467353" class="btn btn--secondary btn--lg">Trucar ara</a>
+    </div>
+  </div>
 
   <main id="main">
     <!-- Hero -->
@@ -333,7 +369,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <a href="index.html" class="footer-logo"><img src="assets/img/LOGO-ESPAI-SALUT.png" alt="Logo ESPAI SALUT" width="40" height="40" loading="lazy"><span class="footer-logo__name">ESPAI SALUT</span></a>
+          <a href="index.html" class="footer-logo"><img src="assets/img/icono-espai-salut.png" alt="Logo ESPAI SALUT" width="40" height="40" loading="lazy"><span class="footer-logo__name">ESPAI SALUT</span></a>
           <p>Centre de psicologia i neuropsicologia a Rubí. Teràpia presencial i online.</p>
           <div class="footer-colegiado">Col·legiada COPC <strong>Nº 27366</strong></div>
           <a href="treballa-amb-nosaltres.html" class="footer-treballa">Treballa amb nosaltres</a>
