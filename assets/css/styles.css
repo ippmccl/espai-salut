@@ -4231,3 +4231,35 @@ input:focus, select:focus, textarea:focus { box-shadow: 0 0 0 3px rgba(var(--col
 /* Contacte al mòbil: el correu llarg no ha de sortir de la pantalla */
 .contact-card > div, .contact-card__value { min-width: 0; }
 .contact-card__value, .contact-card__value a { overflow-wrap: anywhere; }
+
+/* Fotos: al costat del formulari de contacte i a la pàgina de neuropsicologia */
+.contact-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 3rem; }
+.contact-layout > * { min-width: 0; }
+.contact-photo { margin: 0; }
+.contact-photo img {
+  display: block; width: 100%; height: auto;
+  border-radius: var(--radius-xl);
+}
+/* Formulari en dues columnes: dades a l'esquerra; foto i missatge a la dreta */
+.contact-split { display: flex; flex-direction: column; gap: var(--space-5); }
+.contact-split__main { display: flex; flex-direction: column; gap: var(--space-5); }
+.contact-split__main > h2 { margin-bottom: 0 !important; }
+.contact-split__main > p { margin-bottom: .5rem !important; }
+.contact-split__side { display: contents; }
+.contact-split .contact-photo { order: -1; max-width: 460px; }
+.contact-split__side > .form-group { order: 1; }
+@media (min-width: 960px) {
+  .contact-split { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); column-gap: 3.5rem; align-items: start; }
+  .contact-split__side { display: flex; flex-direction: column; gap: var(--space-6); }
+  .contact-split .contact-photo { order: 0; max-width: none; }
+  .contact-split__side > .form-group { order: 0; }
+  .contact-split__side .form-textarea { min-height: 11.5rem; }
+}
+.content-photo { float: right; width: 270px; margin: .25rem 0 1rem 2rem; }
+.content-photo img {
+  display: block; width: 100%; height: auto;   /* foto sencera, sense retallar */
+  border-radius: var(--radius-xl);
+}
+@media (max-width: 640px) {
+  .content-photo { float: none; width: min(100%, 300px); margin: 0 auto 1.5rem; }
+}
