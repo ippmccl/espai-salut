@@ -4263,3 +4263,21 @@ input:focus, select:focus, textarea:focus { box-shadow: 0 0 0 3px rgba(var(--col
 @media (max-width: 640px) {
   .content-photo { float: none; width: min(100%, 300px); margin: 0 auto 1.5rem; }
 }
+
+/* Fotos a les pàgines de servei */
+.content-intro { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.5rem; margin-bottom: var(--space-5); }
+.content-intro__text > h2 { margin-top: 0; margin-bottom: var(--space-4); }
+.content-intro__text > p { margin-bottom: 0; line-height: var(--leading-relaxed); }
+.content-intro__photo { margin: 0 auto; width: min(100%, 320px); }
+.content-intro__photo img, .content-photo-wide img {
+  display: block; width: 100%; height: auto;      /* fotos senceres, sense retallar */
+  border-radius: var(--radius-xl);
+}
+.content-photo-wide { margin: 1.5rem 0 0; }
+@media (min-width: 700px) {
+  .content-intro { grid-template-columns: minmax(0, 1fr) 270px; column-gap: 2rem; align-items: center; }
+  .content-intro__photo { margin: 0; width: auto; }
+}
+
+/* La icona del logo és transparent: sense fons de reserva al peu ni a la capçalera */
+.site-logo img, .footer-logo img, .site-footer img { background: transparent; }
