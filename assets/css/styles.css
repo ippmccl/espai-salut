@@ -3941,3 +3941,293 @@ body .tan-nota, body .tan-badge { font-size: 0.875rem; }
 }
 
 .content-cols > * { min-width: 0; }
+
+
+/* =====================================================================
+   TEMA ARENA (octubre 2026)
+   Crema Pantone 9160 C (#F4E5BF) i turquesa (#0E6F73) a tota la web.
+   ===================================================================== */
+:root {
+  /* Dos colors: crema (Pantone 9160 C) i turquesa. Res de blau mari, verd ni blau. */
+  --color-arena:          #F4E5BF;
+  --color-arena-rgb:      244, 229, 191;
+  --color-turq:           #0E6F73;   /* contrast 4,8:1 sobre crema; 5,9:1 amb lletra blanca */
+  --color-turq-dark:      #0A5C60;
+  --color-turq-rgb:       14, 111, 115;
+
+  --color-primary:        var(--color-turq);
+  --color-primary-dark:   var(--color-turq-dark);
+  --color-primary-light:  #3F8E91;
+  --color-secondary:      var(--color-turq);
+  --color-secondary-dark: var(--color-turq-dark);
+  --color-cta:            var(--color-turq);
+  --color-cta-hover:      var(--color-turq-dark);
+  --color-accent:         var(--color-arena);
+  --color-heading:        var(--color-turq);
+  --color-link:           var(--color-turq);
+
+  --color-bg:             #FDFBF5;
+  --color-bg-section:     #FAF3E0;
+  --color-bg-dark:        var(--color-arena);
+  --color-bg-footer:      var(--color-arena);
+  --color-text:           #2F3A3A;
+  --color-text-light:     #485555;
+  --color-text-muted:     #627070;
+  --color-border:         #E9E1CC;
+  --color-border-light:   #F3EEDF;
+  --shadow-cta:           0 4px 16px rgba(var(--color-turq-rgb), .28);
+  --shadow-primary:       0 4px 16px rgba(var(--color-turq-rgb), .25);
+
+  --color-ink:            var(--color-turq);
+  --color-ink-muted:      var(--color-turq);
+  --color-ink-display:    var(--color-turq);
+  --color-ink-rgb:        var(--color-turq-rgb);
+}
+
+/* ---------- Capçalera: logo a l'esquerra, menú a la dreta ---------- */
+.site-header > .container {
+  height: 100%;                       /* centra verticalment el contingut de la barra */
+  max-width: none;
+  padding-inline: clamp(1rem, 3vw, 2.75rem);
+}
+.site-header { background: rgba(253, 251, 245, .96); }
+.site-nav { margin-left: auto; }
+@media (min-width: 1024px) {
+  .site-nav--curt { gap: clamp(.5rem, 1.6vw, 1.75rem); }
+  .site-nav--curt .nav-link,
+  .site-nav--curt .nav-dropdown__trigger { font-size: .9375rem; padding: .45rem .7rem; }
+  .site-nav--curt + .header-cta { margin-left: clamp(.75rem, 2vw, 2rem); }
+}
+
+/* El subtítol del logo no ha d'empènyer el botó del menú fora de la pantalla al mòbil */
+.site-logo img { flex-shrink: 0; }
+.logo-text__name { white-space: nowrap; }
+.logo-text__sub {
+  font-family: var(--font-body);
+  font-size: clamp(.6875rem, 3vw, .875rem);
+  line-height: 1.12;
+  color: var(--color-primary);
+}
+@media (max-width: 1023px) {
+  .site-logo { min-width: 0; flex-shrink: 1; }
+  .site-logo > .logo-text { min-width: 0; }
+}
+@media (min-width: 1024px) {
+  .logo-text__sub { font-size: clamp(.75rem, 1.25vw, 1rem); white-space: nowrap; }
+}
+
+/* ---------- Portada: retrat velat amb la frase a l'alçada del sofà ---------- */
+.hero-retrat {
+  position: relative;
+  background: var(--color-arena);
+  overflow: hidden;
+  padding: 0;
+}
+.page-content > .hero-retrat { padding-block: 0; }
+.hero-retrat__media { position: relative; }
+.hero-retrat__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center 20%;
+}
+.hero-retrat__veil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgba(var(--color-arena-rgb), .40) 0%,
+    rgba(var(--color-arena-rgb), .46) 70%,
+    rgba(var(--color-arena-rgb), .96) 100%);
+  pointer-events: none;
+}
+.hero-retrat__text {
+  position: relative;
+  text-align: center;
+  padding: 1.5rem var(--gutter) 2.25rem;
+  color: var(--color-ink);
+}
+.hero-retrat__slogan {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-bold);
+  font-size: clamp(1.5rem, 7vw, 2.75rem);
+  line-height: 1.1;
+  letter-spacing: -.01em;
+  color: var(--color-ink-display);
+  margin: 0 0 .75rem;
+  max-width: none;
+  text-wrap: balance;
+}
+.hero-retrat__title {
+  font-family: var(--font-ui);
+  font-weight: var(--fw-medium);
+  font-size: clamp(1rem, 3.8vw, 1.1875rem);
+  line-height: 1.35;
+  letter-spacing: .01em;
+  color: var(--color-ink);
+  margin: 0 0 1.5rem;
+  text-wrap: balance;
+}
+.btn--hero {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .9375rem;
+  padding: .9rem 2.4rem;
+  box-shadow: 0 6px 18px rgba(var(--color-ink-rgb), .28);
+}
+.btn--hero:hover,
+.btn--hero:focus-visible {
+  color: #fff;
+  filter: brightness(1.15);
+  transform: translateY(-1px);
+}
+
+@media (min-width: 768px) {
+  .hero-retrat__media img {
+    aspect-ratio: auto;
+    height: clamp(300px, 31vw, 500px);
+    object-position: 30% 0;
+  }
+  .hero-retrat__veil {
+    background: linear-gradient(90deg,
+      rgba(var(--color-arena-rgb), .44) 0%,
+      rgba(var(--color-arena-rgb), .50) 38%,
+      rgba(var(--color-arena-rgb), .70) 62%,
+      rgba(var(--color-arena-rgb), .74) 100%);
+  }
+  /* La frase queda a la meitat dreta, sota les lletres de la paret */
+  .hero-retrat__text {
+    position: absolute;
+    left: 47%;
+    right: 9%;
+    top: 50%;
+    padding: 0;
+  }
+  .hero-retrat__slogan { font-size: clamp(1.5rem, 3.3vw, 3.2rem); margin-bottom: .3em; }
+  .hero-retrat__title  { font-size: clamp(.8125rem, 1.25vw, 1.1875rem); margin-bottom: 1.1em; }
+  .btn--hero { font-size: clamp(.75rem, 1vw, .9375rem); padding: .8em 2.4em; }
+}
+
+#contacte, #contacto { scroll-margin-top: calc(var(--header-height) + 1rem); }
+
+/* ---------- Zones que eren blau marí: ara arena amb lletra fosca ---------- */
+.section--dark { color: var(--color-ink); }
+.section--dark h1, .section--dark h2, .section--dark h3, .section--dark h4 { color: var(--color-ink); }
+.section--dark a:not(.btn) { color: var(--color-ink); text-decoration: underline; }
+
+.trust-bar { border-top: 1px solid rgba(var(--color-ink-rgb), .14); }
+.trust-item { color: var(--color-ink-muted); }
+.trust-item strong { color: var(--color-ink); }
+.trust-item svg { color: var(--color-ink); }
+
+.page-hero {
+  background: var(--color-arena);
+  color: var(--color-ink);
+}
+.page-hero h1 { color: var(--color-ink); }
+.page-hero p { color: var(--color-ink-muted); }
+.page-hero .breadcrumb a,
+.page-hero .breadcrumb__sep,
+.page-hero .breadcrumb__current { color: var(--color-ink-muted); }
+.page-hero .breadcrumb a:hover { color: var(--color-ink); }
+.page-hero .breadcrumb, .page-hero .breadcrumb li, .page-hero .breadcrumb span { color: var(--color-ink-muted); }
+.page-hero .label { color: var(--color-ink); }
+
+.site-footer { color: var(--color-ink-muted); }
+.site-footer p, .site-footer address { color: var(--color-ink-muted); }
+.footer-grid { border-bottom-color: rgba(var(--color-ink-rgb), .18); }
+.footer-col h4 { color: var(--color-ink); }
+.footer-logo__name { color: var(--color-ink); }
+.footer-col ul a { color: var(--color-ink-muted); }
+.footer-col ul a:hover { color: var(--color-ink); text-decoration: underline; }
+.footer-contact a, .footer-contact span,
+.footer-contact-item span, .footer-contact-item a { color: var(--color-ink-muted); }
+.footer-contact a:hover, .footer-contact-item a:hover { color: var(--color-ink); }
+.footer-contact svg { color: var(--color-ink); }
+.footer-social a { background: rgba(var(--color-ink-rgb), .10); color: var(--color-ink); }
+.footer-social a:hover { background: var(--color-ink); color: #fff; }
+.footer-colegiado {
+  background: rgba(255, 255, 255, .35);
+  border-color: rgba(var(--color-ink-rgb), .22);
+  color: var(--color-ink);
+}
+.footer-colegiado strong { color: var(--color-ink); }
+.footer-treballa { color: var(--color-ink-muted); }
+.footer-treballa:hover { color: var(--color-ink); }
+.footer-bottom__text { color: var(--color-ink-muted); }
+.footer-bottom__links a { color: var(--color-ink-muted); }
+.footer-bottom__links a:hover { color: var(--color-ink); }
+
+.whatsapp-float__tooltip { background: var(--color-ink); color: #fff; }
+
+.cookie-banner { color: var(--color-ink); box-shadow: 0 -4px 24px rgba(var(--color-ink-rgb), .22); }
+.cookie-banner__text p { color: var(--color-ink); }
+.cookie-banner__text a { color: var(--color-ink); text-decoration: underline; }
+.cookie-banner .btn--ghost,
+.cookie-banner .btn--secondary {
+  background: transparent;
+  color: var(--color-ink);
+  border-color: rgba(var(--color-ink-rgb), .55);
+}
+.cookie-banner .btn--ghost:hover,
+.cookie-banner .btn--secondary:hover { background: var(--color-ink); color: #fff; border-color: var(--color-ink); }
+
+/* ---------- Unificació: un sol color de botó i de lletra ---------- */
+.btn--primary, .btn--whatsapp {
+  background: var(--color-turq);
+  border-color: var(--color-turq);
+  color: #fff;
+  box-shadow: var(--shadow-cta);
+}
+.btn--primary:hover, .btn--whatsapp:hover {
+  background: var(--color-turq-dark);
+  border-color: var(--color-turq-dark);
+  color: #fff;
+}
+.btn--secondary { color: var(--color-turq); border-color: var(--color-turq); }
+.btn--secondary:hover { background: var(--color-turq); color: #fff; }
+.btn--hero { box-shadow: var(--shadow-cta); }
+.btn--hero:hover, .btn--hero:focus-visible { background: var(--color-turq-dark); border-color: var(--color-turq-dark); filter: none; }
+
+/* Bandes turquesa (crida final i requadre NEAE): lletra blanca i botons crema */
+.cta-banner { background: var(--color-turq); }
+.cta-banner p { color: rgba(255, 255, 255, .92); }
+.btn--outline-white,
+.btn--ghost,
+.cta-banner .btn {
+  background: var(--color-arena);
+  border-color: var(--color-arena);
+  color: var(--color-turq);
+  box-shadow: none;
+}
+.btn--outline-white:hover,
+.btn--ghost:hover,
+.cta-banner .btn:hover {
+  background: #fff;
+  border-color: #fff;
+  color: var(--color-turq-dark);
+}
+.cookie-banner .btn--ghost,
+.cookie-banner .btn--secondary { background: transparent; color: var(--color-turq); border-color: var(--color-turq); }
+
+/* WhatsApp flotant en el mateix turquesa */
+.whatsapp-float__btn { background: var(--color-turq); box-shadow: 0 4px 20px rgba(var(--color-turq-rgb), .40); }
+.whatsapp-float__btn:hover { box-shadow: 0 8px 28px rgba(var(--color-turq-rgb), .50); }
+
+.logo-text__name, .logo-text__sub { color: var(--color-turq); }
+.footer-colegiado { background: rgba(255, 255, 255, .45); }
+
+/* Sense icones decoratives a les targetes d'especialitats */
+.specialty-card__icon { display: none; }
+
+/* Sense taca verda a les capçaleres interiors; focus dels formularis en turquesa */
+.page-hero::before { display: none; }
+input:focus, select:focus, textarea:focus { box-shadow: 0 0 0 3px rgba(var(--color-turq-rgb), .15); border-color: var(--color-turq); }
+
+/* Contacte al mòbil: el correu llarg no ha de sortir de la pantalla */
+.contact-card > div, .contact-card__value { min-width: 0; }
+.contact-card__value, .contact-card__value a { overflow-wrap: anywhere; }
