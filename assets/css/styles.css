@@ -4281,3 +4281,10 @@ input:focus, select:focus, textarea:focus { box-shadow: 0 0 0 3px rgba(var(--col
 
 /* La icona del logo és transparent: sense fons de reserva al peu ni a la capçalera */
 .site-logo img, .footer-logo img, .site-footer img { background: transparent; }
+
+/* Foto apaisada (teràpia familiar): al costat del text, a la mateixa escala que les altres */
+.content-intro--landscape .content-intro__photo { width: min(100%, 420px); }
+@media (min-width: 700px) {
+  .content-intro--landscape { grid-template-columns: minmax(0, 1fr) 340px; }
+  .content-intro--landscape .content-intro__photo { width: auto; }
+}
