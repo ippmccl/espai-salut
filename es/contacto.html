@@ -114,12 +114,10 @@
 
     <section>
       <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr; gap: 3rem;" class="two-col">
+        <div class="contact-layout">
 
           <!-- Formulari -->
-          <div>
-            <h2 style="margin-bottom: 1.5rem;">Envíanos un mensaje</h2>
-            <p style="color: var(--color-text-light); margin-bottom: 2rem;">Rellena el formulario y te responderemos en menos de 24 horas (en días laborables). Todos los campos marcados con * son obligatorios.</p>
+          <div class="contact-form-wrap">
 
             <!-- Missatge d'èxit (ocult per defecte) -->
             <div id="form-success" class="form-message success" role="alert" style="display:none;">
@@ -140,62 +138,74 @@
                 <input type="text" name="_honey" tabindex="-1" autocomplete="off">
               </div>
 
-              <div class="form-row form-row--2">
-                <div class="form-group">
-                  <label class="form-label" for="nom">Nombre <span class="required" aria-label="campo obligatorio">*</span></label>
-                  <input type="text" id="nom" name="nom" class="form-input" placeholder="Tu nombre" required autocomplete="given-name">
-                  <span class="form-error" id="nom-error" role="alert"></span>
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="cognoms">Apellidos</label>
-                  <input type="text" id="cognoms" name="cognoms" class="form-input" placeholder="Tus apellidos" autocomplete="family-name">
-                </div>
-              </div>
+              <div class="contact-split">
+                <div class="contact-split__main">
+                  <h2 style="margin-bottom: 1.5rem;">Envíanos un mensaje</h2>
+                  <p style="color: var(--color-text-light); margin-bottom: 2rem;">Rellena el formulario y te responderemos en menos de 24 horas (en días laborables). Todos los campos marcados con * son obligatorios.</p>
 
-              <div class="form-row form-row--2">
-                <div class="form-group">
-                  <label class="form-label" for="email">Correo electrónico <span class="required" aria-label="campo obligatorio">*</span></label>
-                  <input type="email" id="email" name="email" class="form-input" placeholder="nombre@ejemplo.com" required autocomplete="email">
-                  <span class="form-error" id="email-error" role="alert"></span>
+                  <div class="form-row form-row--2">
+                    <div class="form-group">
+                      <label class="form-label" for="nom">Nombre <span class="required" aria-label="campo obligatorio">*</span></label>
+                      <input type="text" id="nom" name="nom" class="form-input" placeholder="Tu nombre" required autocomplete="given-name">
+                      <span class="form-error" id="nom-error" role="alert"></span>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="cognoms">Apellidos</label>
+                      <input type="text" id="cognoms" name="cognoms" class="form-input" placeholder="Tus apellidos" autocomplete="family-name">
+                    </div>
+                  </div>
+
+                  <div class="form-row form-row--2">
+                    <div class="form-group">
+                      <label class="form-label" for="email">Correo electrónico <span class="required" aria-label="campo obligatorio">*</span></label>
+                      <input type="email" id="email" name="email" class="form-input" placeholder="nombre@ejemplo.com" required autocomplete="email">
+                      <span class="form-error" id="email-error" role="alert"></span>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="telefon">Teléfono</label>
+                      <input type="tel" id="telefon" name="telefon" class="form-input" placeholder="644 000 000" autocomplete="tel">
+                      <span class="form-error" id="telefon-error" role="alert"></span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="motiu">Motivo de la consulta <span class="required" aria-label="campo obligatorio">*</span></label>
+                    <select id="motiu" name="motiu" class="form-select" required>
+                      <option value="">Selecciona un motivo</option>
+                      <option value="Neuropsicología / TDAH / TEA">Neuropsicología / TDAH / TEA</option>
+                      <option value="Psicología infantojuvenil">Psicología infantojuvenil (niños y adolescentes)</option>
+                      <option value="Psicología de adultos">Psicología de adultos (ansiedad, depresión, estrés...)</option>
+                      <option value="Terapia familiar o grupal">Terapia familiar o grupal</option>
+                      <option value="Personas mayores">Atención psicológica para personas mayores</option>
+                      <option value="Terapia online">Terapia online</option>
+                      <option value="Becas NEAE">Evaluación neuropsicológica para becas NEAE</option>
+                      <option value="Información general">Información general</option>
+                      <option value="Otra consulta">Otra consulta</option>
+                    </select>
+                    <span class="form-error" id="motiu-error" role="alert"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="modalitat">Modalidad preferida</label>
+                    <select id="modalitat" name="modalitat" class="form-select">
+                      <option value="">Indica tu preferencia (opcional)</option>
+                      <option value="Presencial en Rubí">Presencial en Rubí</option>
+                      <option value="Online (videollamada)">Online (videollamada)</option>
+                      <option value="Indiferente">Indiferente</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="form-group">
-                  <label class="form-label" for="telefon">Teléfono</label>
-                  <input type="tel" id="telefon" name="telefon" class="form-input" placeholder="644 000 000" autocomplete="tel">
-                  <span class="form-error" id="telefon-error" role="alert"></span>
+                <div class="contact-split__side">
+                  <figure class="contact-photo">
+                    <img src="../assets/img/foto-espai.jpg" alt="Mª Carmen Cabello León, psicóloga y neuropsicóloga, en la consulta de ESPAI SALUT en Rubí" width="1100" height="1005" loading="lazy">
+                  </figure>
+
+                  <div class="form-group">
+                    <label class="form-label" for="missatge">Mensaje <span class="required" aria-label="campo obligatorio">*</span></label>
+                    <textarea id="missatge" name="missatge" class="form-textarea" placeholder="Explícanos brevemente el motivo de tu consulta. Cuanta más información nos des, mejor podremos orientarte." rows="5" required></textarea>
+                    <span class="form-error" id="missatge-error" role="alert"></span>
+                  </div>
                 </div>
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="motiu">Motivo de la consulta <span class="required" aria-label="campo obligatorio">*</span></label>
-                <select id="motiu" name="motiu" class="form-select" required>
-                  <option value="">Selecciona un motivo</option>
-                  <option value="Neuropsicología / TDAH / TEA">Neuropsicología / TDAH / TEA</option>
-                  <option value="Psicología infantojuvenil">Psicología infantojuvenil (niños y adolescentes)</option>
-                  <option value="Psicología de adultos">Psicología de adultos (ansiedad, depresión, estrés...)</option>
-                  <option value="Terapia familiar o grupal">Terapia familiar o grupal</option>
-                  <option value="Personas mayores">Atención psicológica para personas mayores</option>
-                  <option value="Terapia online">Terapia online</option>
-                  <option value="Becas NEAE">Evaluación neuropsicológica para becas NEAE</option>
-                  <option value="Información general">Información general</option>
-                  <option value="Otra consulta">Otra consulta</option>
-                </select>
-                <span class="form-error" id="motiu-error" role="alert"></span>
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="modalitat">Modalidad preferida</label>
-                <select id="modalitat" name="modalitat" class="form-select">
-                  <option value="">Indica tu preferencia (opcional)</option>
-                  <option value="Presencial en Rubí">Presencial en Rubí</option>
-                  <option value="Online (videollamada)">Online (videollamada)</option>
-                  <option value="Indiferente">Indiferente</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="missatge">Mensaje <span class="required" aria-label="campo obligatorio">*</span></label>
-                <textarea id="missatge" name="missatge" class="form-textarea" placeholder="Explícanos brevemente el motivo de tu consulta. Cuanta más información nos des, mejor podremos orientarte." rows="5" required></textarea>
-                <span class="form-error" id="missatge-error" role="alert"></span>
               </div>
 
               <!-- Consentiment RGPD — casella no premarcada, obligatòria -->
@@ -219,7 +229,7 @@
           </div>
 
           <!-- Informació de contacte -->
-          <div>
+          <div class="contact-info">
             <h2 style="margin-bottom: 1.5rem;">Otras formas de contactar</h2>
             <p style="color: var(--color-text-light); margin-bottom: 2rem;">Si prefieres llamar, enviar un WhatsApp o venir directamente, aquí tienes toda la información.</p>
 
