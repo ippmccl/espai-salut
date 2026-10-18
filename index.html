@@ -43,85 +43,153 @@
 
   <!-- ===== SCHEMA.ORG JSON-LD ===== -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": ["LocalBusiness", "MedicalBusiness", "Psychologist"],
-        "@id": "https://www.espaisalutrubi.es/#organization",
-        "name": "ESPAI SALUT Centre de recursos i acompanyament psicològic",
-        "alternateName": "Espai Salut Rubí",
-        "url": "https://www.espaisalutrubi.es",
-        "logo": "https://www.espaisalutrubi.es/assets/img/LOGO-ESPAI-SALUT.png",
-        "image": "https://www.espaisalutrubi.es/assets/img/og-image.jpg",
-        "description": "Centre de psicologia i neuropsicologia a Rubí. Psicòloga General Sanitària especialitzada en neuropsicologia. Atenció a nens, adolescents, adults i gent gran. Teràpia individual, familiar i grupal. Presencial i online.",
-        "telephone": "+34644467353",
-        "email": "espaisalutrubi@gmail.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Baixada de Sant Joan 18, 1r pis",
-          "addressLocality": "Rubí",
-          "addressRegion": "Barcelona",
-          "postalCode": "08191",
-          "addressCountry": "ES"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 41.4927,
-          "longitude": 2.0328
-        },
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-            "opens": "15:00",
-            "closes": "20:00"
-          }
-        ],
-        "sameAs": [
-          "https://www.instagram.com/espaisalutrubi/",
-          "https://www.tiktok.com/@espaisalutrubi"
-        ],
-        "medicalSpecialty": ["Neuropsychology", "Psychology"],
-        "priceRange": "€€",
-        "currenciesAccepted": "EUR",
-        "paymentAccepted": "Cash, Bank transfer"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "LocalBusiness",
+        "MedicalBusiness",
+        "Psychologist"
+      ],
+      "@id": "https://www.espaisalutrubi.es/#organization",
+      "name": "ESPAI SALUT Centre de recursos i acompanyament psicològic",
+      "alternateName": "Espai Salut Rubí",
+      "url": "https://www.espaisalutrubi.es",
+      "logo": "https://www.espaisalutrubi.es/assets/img/LOGO-ESPAI-SALUT.png",
+      "image": "https://www.espaisalutrubi.es/assets/img/og-image.jpg",
+      "description": "Centre de psicologia i neuropsicologia a Rubí. Psicòloga General Sanitària especialitzada en neuropsicologia. Atenció a nens, adolescents, adults i gent gran. Teràpia individual, familiar i grupal. Presencial i online. Atenció amb cita prèvia i horari flexible.",
+      "telephone": "+34644467353",
+      "email": "espaisalutrubi@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Baixada de Sant Joan 18, 1r pis",
+        "addressLocality": "Rubí",
+        "addressRegion": "Barcelona",
+        "postalCode": "08191",
+        "addressCountry": "ES"
       },
-      {
-        "@type": "Person",
-        "@id": "https://www.espaisalutrubi.es/#psychologist",
-        "name": "María del Carmen Cabello León",
-    "alternateName": ["Mª Carmen Cabello León", "Mari Carmen Cabello", "Mari Carmen Cabello León", "M. Carmen Cabello León", "M. Carme Cabello", "Maria del Carmen Cabello", "Maria del Carmen Cabello León", "María del Carmen Cabello", "Maria Carmen Cabello"],
-        "givenName": "María del Carmen",
-        "familyName": "Cabello León",
-        "jobTitle": "Psicòloga General Sanitària i Neuropsicòloga",
-        "affiliation": { "@id": "https://www.espaisalutrubi.es/#organization" },
-        "memberOf": {
-          "@type": "Organization",
-          "name": "Col·legi Oficial de Psicologia de Catalunya (COPC)",
-          "url": "https://www.copc.cat"
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.4927,
+        "longitude": 2.0328
+      },
+      "sameAs": [
+        "https://www.instagram.com/espaisalutrubi/",
+        "https://www.tiktok.com/@espaisalutrubi"
+      ],
+      "medicalSpecialty": [
+        "Neuropsychology",
+        "Psychology"
+      ],
+      "priceRange": "€€",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Cash, Bank transfer",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Rubí"
         },
-        "knowsAbout": ["Neuropsicologia", "Psicologia Sanitària", "TDAH", "TEA", "Ansietat", "Depressió", "NEAE"],
-        "hasCredential": {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "Col·legiada",
-          "recognizedBy": {
-            "@type": "Organization",
-            "name": "Col·legi Oficial de Psicologia de Catalunya (COPC)"
-          },
-          "identifier": "COPC 27366"
+        {
+          "@type": "City",
+          "name": "Sant Cugat del Vallès"
+        },
+        {
+          "@type": "City",
+          "name": "Terrassa"
+        },
+        {
+          "@type": "City",
+          "name": "Castellbisbal"
+        },
+        {
+          "@type": "City",
+          "name": "Sant Quirze del Vallès"
+        },
+        {
+          "@type": "City",
+          "name": "Valldoreix"
+        },
+        {
+          "@type": "City",
+          "name": "Les Fonts"
+        },
+        {
+          "@type": "Country",
+          "name": "España"
         }
+      ],
+      "availableLanguage": [
+        "ca",
+        "es"
+      ],
+      "isAcceptingNewPatients": true,
+      "founder": {
+        "@id": "https://www.espaisalutrubi.es/#psychologist"
       },
-      {
-        "@type": "WebSite",
-        "@id": "https://www.espaisalutrubi.es/#website",
-        "url": "https://www.espaisalutrubi.es",
-        "name": "ESPAI SALUT",
-        "inLanguage": ["ca", "es"],
-        "publisher": { "@id": "https://www.espaisalutrubi.es/#organization" }
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=ESPAI+SALUT+Baixada+de+Sant+Joan+18+Rub%C3%AD",
+      "keywords": "psicòloga Rubí, psicòleg Rubí, psicologia Rubí, neuropsicologia Rubí, teràpia online, psicòloga online"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.espaisalutrubi.es/#psychologist",
+      "name": "María del Carmen Cabello León",
+      "alternateName": [
+        "Mª Carmen Cabello León",
+        "Mari Carmen Cabello",
+        "Mari Carmen Cabello León",
+        "M. Carmen Cabello León",
+        "M. Carme Cabello",
+        "Maria del Carmen Cabello",
+        "Maria del Carmen Cabello León",
+        "María del Carmen Cabello",
+        "Maria Carmen Cabello"
+      ],
+      "givenName": "María del Carmen",
+      "familyName": "Cabello León",
+      "jobTitle": "Psicòloga General Sanitària i Neuropsicòloga",
+      "affiliation": {
+        "@id": "https://www.espaisalutrubi.es/#organization"
+      },
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Col·legi Oficial de Psicologia de Catalunya (COPC)",
+        "url": "https://www.copc.cat"
+      },
+      "knowsAbout": [
+        "Neuropsicologia",
+        "Psicologia Sanitària",
+        "TDAH",
+        "TEA",
+        "Ansietat",
+        "Depressió",
+        "NEAE"
+      ],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Col·legiada",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Col·legi Oficial de Psicologia de Catalunya (COPC)"
+        },
+        "identifier": "COPC 27366"
       }
-    ]
-  }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.espaisalutrubi.es/#website",
+      "url": "https://www.espaisalutrubi.es",
+      "name": "ESPAI SALUT",
+      "inLanguage": [
+        "ca",
+        "es"
+      ],
+      "publisher": {
+        "@id": "https://www.espaisalutrubi.es/#organization"
+      }
+    }
+  ]
+}
   </script>
 </head>
 
