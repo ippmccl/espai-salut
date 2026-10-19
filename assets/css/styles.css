@@ -4303,9 +4303,9 @@ input:focus, select:focus, textarea:focus { box-shadow: 0 0 0 3px rgba(var(--col
 
 /* ===== Botons hero centrats, modalitat i beques (2026-10-18) ===== */
 .page-hero__actions { margin-top: 1.75rem; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
-.page-hero__actions .btn--lg { font-size: calc(var(--text-base) - 4px); padding: .75rem 1.6rem; }
-.modalitat { margin: 1.25rem auto 0; font-family: var(--font-body, inherit); font-size: 1.15rem; color: var(--color-ink); text-align: center; }
-.modalitat strong { font-family: var(--font-ui); font-weight: 800; text-transform: uppercase; letter-spacing: .12em; color: var(--color-turq); }
+.page-hero__actions .btn--lg { font-size: .875rem; padding: .7rem 1.5rem; }
+.modalitat { margin: 1.1rem auto 0; font-family: var(--font-body, inherit); font-size: 1.02rem; color: var(--color-ink); text-align: center; }
+.modalitat strong { font-family: var(--font-ui); font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--color-turq); }
 .modalitat a { color: inherit; text-decoration: none; }
 .modalitat a strong { border-bottom: 2px solid var(--color-turq); }
 .modalitat a:hover strong { color: var(--color-turq-dark); }
@@ -4321,3 +4321,7 @@ input:focus, select:focus, textarea:focus { box-shadow: 0 0 0 3px rgba(var(--col
 .services-grid--center > .service-card { flex: 0 1 calc((100% - 2 * var(--space-6)) / 3); }
 @media (max-width: 900px) { .services-grid--center > .service-card { flex-basis: calc((100% - var(--space-6)) / 2); } }
 @media (max-width: 560px) { .services-grid--center > .service-card { flex-basis: 100%; } }
+
+/* Botons grans una mica més petits a tot el web (2026-10-19) */
+.btn--lg { font-size: .9375rem; padding: .8rem 1.8rem; }
+.page-hero__actions .btn--lg { font-size: .875rem; padding: .7rem 1.5rem; }
